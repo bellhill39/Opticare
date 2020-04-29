@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Vision;
 use Illuminate\Http\Request;
 
 class VisionController extends Controller
@@ -9,32 +10,35 @@ class VisionController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        //
+        $visions = Vision::all();
+        return view('vision.index');
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
-        //
+        return  view('view.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(Request $request)
     {
-        //
+        Vision::create($request);
+
+        return redirect('/vision');
     }
 
     /**
@@ -79,6 +83,6 @@ class VisionController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }

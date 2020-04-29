@@ -7,7 +7,7 @@
     <title>Opti Care</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('styles.css',true)}}">
+    <link rel="stylesheet" href="{{asset('styles.css')}}">
     <!-- icons -->
     <script src="https://kit.fontawesome.com/bf96bc6662.js" crossorigin="anonymous"></script>
 
@@ -109,6 +109,7 @@
     </nav>
     <!-- Navbar -->
 </section>
+
 <header>
     <div class="overlay"></div>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" id="video-bg">
@@ -301,7 +302,7 @@
 </footer>
 
 
-<script src="{{asset('index.js',true)}}" charset="utf-8"></script>
+<script src="{{asset('index.js')}}" charset="utf-8"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
@@ -313,7 +314,7 @@
 <!-- JQuery -->
 <!-- text change -->
 
-<script src="{{asset('jquery-textTweener.min.js',true)}}"></script>
+<script src="{{asset('jquery-textTweener.min.js')}}"></script>
 
 <script>
     $("#texttween").TextTweener({
